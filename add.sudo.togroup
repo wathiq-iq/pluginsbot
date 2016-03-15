@@ -1,0 +1,57 @@
+do
+
+local function callback(extra, success, result)
+  vardump(success)
+  vardump(result)
+end
+
+local function run(msg, matches)
+ if matches[1] == 'W' then
+        chat = 'chat#'..msg.to.id
+        user1 = 'user#'..--id--
+        chat_add_user(chat, user1, callback, false)
+	return "تم اضافة المطور واثق"
+      end
+if matches[1] == 'R' then
+        chat = 'chat#'..msg.to.id
+        user2 = 'user#'..--id--
+        chat_add_user(chat, user2, callback, false)
+	return "تم اضافة المطور رعد"
+      end
+if matches[1] == 'M' then
+        chat = 'chat#'..msg.to.id
+        user3 = 'user#'..--id--
+        chat_add_user(chat, user3, callback, false)
+	return "تم اضافة المطور محمد"
+      end	  
+if matches[1] == 'S' then
+        chat = 'chat#'..msg.to.id
+        user4 = 'user#'..--id--
+        chat_add_user(chat, user4, callback, false)
+	return "تم اضافة المطور سعد"	  
+     end
+if matches[1] == 'T' then
+        chat = 'chat#'..msg.to.id
+        user5 = 'user#'..--id--
+        chat_add_user(chat, user5, callback, false)
+	return "تم اضافة المطور تيزاب"
+     end	
+ end
+
+return {
+  description = "Invite Sudo and Admin", 
+  usage = {
+    "!W,R,M,S,T : invite Bot Sudo", 
+	},
+  patterns = {
+    "^[!#/](W)", --wathiq--
+    "^[!#/](R)", --r3aad--
+	"^[!#/](M)", --mahamad--
+	"^[!#/](S)", --saad--
+	"^[!#/](T)" --tezab--
+  }, 
+  run = run,
+}
+
+
+end
